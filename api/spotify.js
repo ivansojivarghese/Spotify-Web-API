@@ -53,8 +53,16 @@ export default async function handler(req, res) {
           : null;
 
     if (!recentResponse.ok) {
+      const recentError = await recentResponse.text();
+      console.error(
+        'Spotify recently played request failed:',
+        recentResponse.status,
+        recentError
+      );
       return res.status(502).json({
-        error: 'Could not retrieve recently played tracks'
+        error: 'Could not retrieve recently played tracks',
+        spotifyStatus: recentResponse.status,
+        spotifyError: recentError || null
       });
     }
 
