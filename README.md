@@ -2,6 +2,58 @@
 
 Utilizing the Web API feature of Spotify in obtaining personal metric(s) data. As referenced on this [personal website](https://ivansojivarghese.github.io/) - ```ivansojivarghese.github.io/```.
 
+## Output
+
+For ```user-read-playback-state```, ```user-read-currently-playing```, or ```user-read-recently-played```:
+
+```
+{
+  "playback": {
+    "device": {
+      "id": "c47bb38f575be6a336223f80e4578f62b6f1c5b4",
+      "is_active": true,
+      "is_private_session": false,
+      "is_restricted": false,
+      "name": "Web Player (Microsoft Edge)",
+      "supports_volume": true,
+      "type": "Computer",
+      "volume_percent": 66
+    },
+    "shuffle_state": true,
+    "smart_shuffle": false,
+    "repeat_state": "off",
+    "is_playing": true,
+    "timestamp": 1794224549105,
+    "context": {
+      "external_urls": {
+        "spotify": "https://open.spotify.com/playlist/37i9dQZF1EP6YuccBxUcC1"
+      },
+      "href": "https://api.spotify.com/v1/playlists/37i9dQZF1EP6YuccBxUcC1",
+      "type": "playlist",
+      "uri": "spotify:playlist:37i9dQZF1EP6YuccBxUcC1"
+    },
+    "progress_ms": 37538,
+    "item": {
+      "album": {
+        "album_type": "single",
+        "artists": [
+          {
+            "external_urls": {
+              "spotify": "https://open.spotify.com/artist/1oobYLromCfJh2nx8pfZiI"
+            },
+            "href": "https://api.spotify.com/v1/artists/1oobYLromCfJh2nx8pfZiI",
+            "id": "1oobYLromCfJh2nx8pfZiI",
+            "name": "Mar Vei",
+            "type": "artist",
+            "uri": "spotify:artist:1oobYLromCfJh2nx8pfZiI"
+          }
+        ],
+        "external_urls": {
+          "spotify": "https://open.spotify.com/album/2PCpYWfdRi80bNCqrZAz9P"
+        },
+...
+```
+
 ## Refreshing Tokens
 
 When 6-month ```refresh_token``` reaches the end of its life, Spotify will reject any further requests. To obtain a new ```refresh_token```:
