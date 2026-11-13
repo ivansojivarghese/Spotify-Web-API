@@ -81,3 +81,5 @@ curl -X POST "https://accounts.spotify.com/api/token" \
 ```
 
 Copy the new ```refresh_token``` from the JSON response and replace the old one in script or .env file on Vercel. Expires 6 months later, repeat steps as above.
+
+```SPOTIFY_AUTHORIZED_AT=2026-11-09```
